@@ -183,7 +183,7 @@ function moveDodgerLeft() {
   if (leftNumbers > 0) {
     leftNumbers -= 4;
     DODGER.style.left = `${leftNumbers}px`;
-    window.requestAnimationFrame();
+    window.requestAnimationFrame(moveDodgerLeft);
   }
 }
 
@@ -197,7 +197,7 @@ function moveDodgerRight() {
   if (leftNumbers < 360) {
     leftNumbers += 4;
     DODGER.style.left = `${leftNumbers}px`;
-    window.requestAnimationFrame();
+    window.requestAnimationFrame(moveDodgerRight);
   }
 }
 
