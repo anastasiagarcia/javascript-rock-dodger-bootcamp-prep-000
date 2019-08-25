@@ -46,7 +46,7 @@ function checkCollision(rock) {
     if (rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge) {
       return true;
     }
-    if (rockLeftEdge > dodgerLeftEdge && rockRightEdge < dodgerRightEdge) {
+    if (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge) {
       return true;
     }
 
