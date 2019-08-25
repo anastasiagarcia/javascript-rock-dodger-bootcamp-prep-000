@@ -102,7 +102,7 @@ function createRock(x) {
         window.requestAnimationFrame(moveRock);
       }
     }
-    window.requestAnimationFrame(moveRock);
+
     // implement me!
     // (use the comments below to guide you!)
     /**
@@ -120,7 +120,7 @@ function createRock(x) {
      * we should remove the rock from the DOM
      */
   }
-
+  window.requestAnimationFrame(moveRock);
   // We should kick of the animation of the rock around here
 
   // Add the rock to ROCKS so that we can remove all rocks
