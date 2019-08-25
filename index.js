@@ -101,6 +101,10 @@ function createRock(x) {
         rock.style.top = `${topRock - 2}px`;
         window.requestAnimationFrame(moveRock);
       }
+      else {
+        GAME.removeChild(rock);
+
+      }
     }
 
     // implement me!
