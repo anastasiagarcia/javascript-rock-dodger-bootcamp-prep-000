@@ -168,6 +168,8 @@ function moveDodger(e) {
   }
   if (e.which === RIGHT_ARROW) {
     moveDodgerRight();
+    e.preventDefault();
+    e.stopPropagation();
   }
 }
 
@@ -189,6 +191,10 @@ function moveDodgerRight() {
    * This function should move DODGER to the right
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
+  var leftNumbers = positionToInteger(DODGER.style.left);
+  leftNumbers += 4;
+  DODGER.style.left = `${leftNumbers}px`;
+  window.requestAnimationFrame();
 }
 
 /**
