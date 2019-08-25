@@ -146,7 +146,7 @@ function endGame() {
   for (var i = 0; i < ROCKS.lenght; i++) {
     GAME.removeChild(ROCKS[i]);
   }
-  ROCKS = [];
+  ROCKS.length = 0;
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!");
 
