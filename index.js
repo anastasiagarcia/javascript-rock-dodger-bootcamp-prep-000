@@ -90,6 +90,19 @@ function createRock(x) {
    * seems like a good pace.)
    */
   function moveRock() {
+
+    if (checkCollision(rock) === true) {
+      endGame();
+    }
+    else {
+      const topRock = positionToInteger(rock.style.top);
+      const bottomRock = topRock - 20;
+      if (bottomRock > 0) {
+        rock.style.top = `${topRock - 2}px`;
+        window.requestAnimationFrame(moveRock);
+      }
+    }
+    window.requestAnimationFrame(moveRock);
     // implement me!
     // (use the comments below to guide you!)
     /**
